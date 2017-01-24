@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(82, 138, 199);
+    margin: 0;
+}
+
+div#nav {
+    
+}
+
+div.top {
+    font-size: 25px;
+    text-align: center;
+    background-color: rgb(194, 194, 214);
+    top:0;
+    width:100%;
+    height: 190px;
+    z-index:100;
+    padding-top: 10px;
+}
+
+div.info {
+    text-align: left;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+span.button {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgb(0, 89, 179);
+    width: 190px;
+    text-align: center;
+}
+
+span.button a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+main h2 {
+    font-size: 35px;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(194, 194, 214);
+}
+
+div.logowanie {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+fieldset {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+fieldset p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+input[type=text] {
+    padding: 5px;
+    width: 250px;
+    float: right;
+}
+
+input[type=password] {
+    padding: 5px;
+    width: 250px;
+    float: right;
+}
+
+input[type=email] {
+    padding: 5px;
+    width: 250px;
+    float: right;
+}
+
+input[type=url] {
+    padding: 5px;
+    width: 250px;
+    float: right;
+}
+
+input[type=checkbox] {
+    margin-left: 64px;
+}
+
+input[type=submit] {
+    padding: 5px;
+    background-color: rgb(0, 89, 179);
+    width: 200px;
+    text-align: center;
+    border: 0;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    padding: 5px;
+    background-color: rgb(0, 89, 179);
+    width: 200px;
+    text-align: center;
+    border: 0;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 64, 128);
+    color: rgb(214, 214, 194);
+}
+
+span.button:hover {
+    background-color: rgb(0, 64, 128);
+    color: rgb(214, 214, 194);
+}
+
+div.wizytowka {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0, 89, 179);
+    float: left;
+    padding: 10p;
+    margin: 20px;
+}
+
+div.wizytowki td a {
+    display: block; 
+    padding: 16px; 
+}
+
+div.wizytowki tr:hover {
+    background-color: red;
+}
+
+div.imie {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(0, 38, 77);
+    color: white;
+    font-size: 21px;
+    text-align: center;
+}
+
+div.imie span {
+    display: block;
+    padding-top: 20px;
+}
+
+div.wizytowka span.button {
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 42px;
+}
+
+div.wizytowka:hover {
+    opacity: 0.9;
+}
+
+div.informacje div.info1 {
+    color: white;
+    font-size: 24px;
+    padding-left: 5px;
+    padding-top: 2px;
+}
+div.informacje div.info2 {
+    color: white;
+    font-size: 17px;
+    padding-left: 25px;
+    padding-top: 2px;
+}

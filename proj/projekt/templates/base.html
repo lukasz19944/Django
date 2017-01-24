@@ -1,0 +1,15 @@
+{% load static %}
+<!doctype htm>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Wizytówki studentów</title>
+    <link rel="stylesheet" href="{% static 'projekt/style.css' %}" type="text/css" />
+    {% block external %}{% endblock %}
+  </head>
+  <body>
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+  </body>
+</html>

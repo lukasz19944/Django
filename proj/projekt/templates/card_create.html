@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="logowanie">
+    <center>
+        <h2>TWORZENIE WIZYTÓWKI</h2>
+        Wypełnij poniższe pola, aby stworzyć wizytówkę.
+    </center>
+    <br>
+    <div>
+        <fieldset>
+            <form method="post" action=".">{% csrf_token %}
+                <div style="text-align:left";>{{ form.as_p }}</div><br>
+                <input type="submit" value="UTWÓRZ">    <br><br>
+                <input type="reset" value="ZRESETUJ">
+            
+                <br><br>
+            
+                <span class="button"><a href="/">STRONA GŁÓWNA</a></span>
+            </form>
+          
+        </fieldset>
+    </div>
+</div>
+
+{% endblock %}
+{% block footer %}
+<footer> &copy; Łukasz Ślusarski. Wszelkie prawa zastrzeżone.</footer>
+{% endblock %}

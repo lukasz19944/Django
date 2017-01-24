@@ -1,0 +1,69 @@
+{% extends "base.html"%}
+
+
+{% block header %}
+  <div id="nav">
+    {% if user.is_authenticated %}
+      <div class="top">
+            Zalogowany jako: <b>{{user.username}}</b>
+            <div class="info">
+                <span class="info2">Stwórz własną wizytówkę</span>
+                <span class="button"  style="margin-left:170px;"><a href="/card_create/">UTWÓRZ</a></span>
+            </div>
+            <div class="info">
+                <span class="info2">Wyloguj się</span>
+                <span class="button"  style="margin-left:312px;"><a href="/logout/">WYLOGUJ</a>  </span>
+            </div>
+        </div>
+    {% else %}
+        <div class="top">
+            Strona umożliwiająca studentom umieszczenie swojej wizytówki. Aby dodać swoją wizytówkę na stronie musisz się zalogować.
+            <div class="info">
+                <span class="info2">Jeśli masz już konto to zaloguj się</span>
+                <span class="button" style="margin-left:170px;"><a href="/login/">LOGOWANIE</a></span>
+            </div>
+            <div class="info">
+                <span class="info2">Jeśli nie masz jeszcze konta to zarejestruj się</span>
+                <span class="button" style="margin-left:65px;"><a href="/register/">REJESTRACJA</a></span>
+            </div>
+        </div>
+    {% endif %}
+  </div>
+{% endblock %}
+
+
+{% block content %}
+<main>
+        <div class="wizytowki">
+            <div class="opis">
+                <center><h2>Wizytówki stworzone przez użytkowników strony:</h2></center>
+            <div>         
+                {% for wizytowka in wizytowki %}
+                    {% if forloop.counter0|divisibleby:"4"  %}
+                        <div style="clear:both"></div>
+                    {% else %}
+                        <div class="wizytowka">
+                            <div class="imie">
+                                <span>{{wizytowka.imie|upper}} {{wizytowka.nazwisko|upper}}</span>
+                            </div>
+                            <div class="informacje">
+                                <div class="info1">Uczelnia: </div>
+                                <div class="info2">{{wizytowka.uczelnia}}</div>
+                                <div class="info1">Kierunek:</div>
+                                <div class="info2">{{wizytowka.kierunek}}</div>
+                                <div class="info1">E-mail:</div>
+                                <div class="info2">{{wizytowka.email}}</div>
+                                <div class="info1">Telefon:</div>
+                                <div class="info2">{{wizytowka.telefon}}</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+</main>
+{% endblock %}
+
+
+{% block footer %}
+<footer> &copy; Łukasz Ślusarski. Wszelkie prawa zastrzeżone.</footer>
+{% endblock %}

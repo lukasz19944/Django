@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="logowanie">
+    <center>
+        <h2>Rejestracja przebiegła pomyślnie.</h2>
+        <h3>Twoj login to: {{username}}</h3>
+        <h3>Teraz możesz się zalogować, aby utworzyć swojeą wizytówkę.</h3>
+        <span class="button"><a href="/login/">LOGOWANIE</a></span>
+        <br><br>
+        <span class="button"><a href="/">STRONA GŁÓWNA</a></span>
+    </center>
+    <br>
+    
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer> &copy; Łukasz Ślusarski. Wszelkie prawa zastrzeżone.</footer>
+{% endblock %}

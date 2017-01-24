@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="logowanie">
+    <center>
+        <h2>REJESTRACJA</h2>
+        Rejestracja jest wymagana, jeżeli chcesz dodać swoją wizytówkę.
+    </center>
+    <br>
+    <div>
+        <fieldset>
+            <form method="post" action=".">{% csrf_token %}
+                <div style="text-align:left";>{{ form.as_p }}</div>
+                <input type="submit" value="ZAREJESTRUJ">
+                
+                <br><br>
+            
+            <span class="button"><a href="/">STRONA GŁÓWNA</a></span>
+            </form>
+        </fieldset>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer> &copy; Łukasz Ślusarski. Wszelkie prawa zastrzeżone.</footer>
+{% endblock %}
